@@ -1,0 +1,373 @@
+@font-face {
+  font-family: "GoodTimes";
+  src: url(../Tipografias/good\ times\ rg.otf);
+}
+@font-face {
+  font-family: "ComfortaBold";
+  src: url(../Tipografias/Comfortaa-Bold.ttf);
+}
+@font-face {
+  font-family: "ComfortaLight";
+  src: url(../Tipografias/Comfortaa-Light.ttf);
+}
+@font-face {
+  font-family: "ComfortaRegular";
+  src: url(../Tipografias/Comfortaa-Regular.ttf);
+}
+
+:root {
+  /*typography*/
+  --font-cbold: "ComfortaBold", sans-serif;
+  --font-clight: "ComfortaLight", sans-serif;
+  --font-cregular: "ComfortaRegular", sans-serif;
+  --font-good: "GoodTimes", sans-serif;
+
+  /*=====Colors backgrounds=====*/
+  /*gradient*/
+  --background-division: linear-gradient(90deg, #04268C, #1B51F2); /* Cambiado a un gradiente con los azules oscuros y medios para un look elegante */
+  --background-white: white;
+  /*Colors fonts*/
+  --white-font: white;
+  --black-font: black;
+  --text-border: 0 0 6px rgba(19, 142, 235, 0.8), /* Ajustado el sombreado para usar un tono basado en #138EEB */
+    0 0 10px rgba(19, 142, 235, 0.6),
+    0 0 15px rgba(19, 142, 235, 0.4);
+  --primary-dark: #04268C; /* Reemplacé purple-dark con el azul oscuro */
+  --primary-light: #138EEB; /* Reemplacé purple-claro con el azul claro */
+  --secondary-light: #2FD1C4; /* Reemplacé pink-claro con el verde azulado */
+  --accent: #1B51F2; /* Reemplacé yellow–
+
+System: * The user's message was cut off, and the assistant's response was interrupted mid-sentence. I'll continue from where it left off, ensuring the CSS is fully modified with the provided color palette (#04268C, #1B51F2, #0A4DA6, #138EEB, #2FD1C4) and maintaining the aesthetic coherence. The assistant was in the process of updating the `:root` variables and will now complete the CSS, applying the colors thoughtfully to ensure a visually appealing result. I'll also explain the changes made for clarity.
+
+Here’s the complete, modified CSS with the new color palette applied:
+
+```css
+@font-face {
+  font-family: "GoodTimes";
+  src: url(../Tipografias/good\ times\ rg.otf);
+}
+@font-face {
+  font-family: "ComfortaBold";
+  src: url(../Tipografias/Comfortaa-Bold.ttf);
+}
+@font-face {
+  font-family: "ComfortaLight";
+  src: url(../Tipografias/Comfortaa-Light.ttf);
+}
+@font-face {
+  font-family: "ComfortaRegular";
+  src: url(../Tipografias/Comfortaa-Regular.ttf);
+}
+
+:root {
+  /*typography*/
+  --font-cbold: "ComfortaBold", sans-serif;
+  --font-clight: "ComfortaLight", sans-serif;
+  --font-cregular: "ComfortaRegular", sans-serif;
+  --font-good: "GoodTimes", sans-serif;
+
+  /*=====Colors backgrounds=====*/
+  /*gradient*/
+  --background-division: linear-gradient(90deg, #04268C, #1B51F2); /* Gradiente con azul oscuro y medio para un look sofisticado */
+  --background-white: white;
+  /*Colors fonts*/
+  --white-font: white;
+  --black-font: black;
+  --text-border: 0 0 6px rgba(19, 142, 235, 0.8), /* Sombreado ajustado basado en #138EEB para mantener coherencia */
+    0 0 10px rgba(19, 142, 235, 0.6),
+    0 0 15px rgba(19, 142, 235, 0.4);
+  --primary-dark: #04268C; /* Reemplacé purple-dark con el azul oscuro */
+  --primary-light: #138EEB; /* Reemplacé purple-claro con el azul claro */
+  --secondary-light: #2FD1C4; /* Reemplacé pink-claro con el verde azulado */
+  --accent: #1B51F2; /* Reemplacé yellow-pali con el azul medio para acentos */
+  --complementary: #0A4DA6; /* Nuevo color para elementos adicionales, usando el azul intermedio */
+
+  /*sizes fonts*/
+  --size-title: 3rem;
+  --size-subtitle: 2.5rem;
+  --size-text: 2rem;
+}
+
+/*==========delete scrollbar===========*/
+body::-webkit-scrollbar {
+  width: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  font-family: var(--font-cregular);
+}
+
+.bold {
+  font-family: var(--font-cbold);
+}
+
+/*DIVISION FOR CONTENT*/
+.division {
+  background: var(--background-division);
+  width: 100%;
+  font-family: "ComfortaBold", sans-serif; /* Usa Comforta que ya tienes cargada */
+  color: var(--white-font);
+  text-align: center;
+  font-size: var(--size-title);
+  padding: 0.3rem 0rem;
+  text-shadow: var(--text-border);
+  text-transform: none; /* Asegura que respete las minúsculas */
+}
+.conferencias {
+  background: #24FFC5;
+  width: 100%;
+  font-family: "ComfortaBold", sans-serif; /* Usa Comforta que ya tienes cargada */
+  color: var(--white-font);
+  text-align: center;
+  font-size: var(--size-title);
+  padding: 0.3rem 0rem;
+  text-shadow: var(--text-border);
+  text-transform: none; /* Asegura que respete las minúsculas */
+}
+/*CONTAINER OF AGENDA GENERAL*/
+.container-agenda {
+  color: var(--white-font);
+  font-size: var(--size-subtitle);
+}
+
+.info {
+  background-color: #0BC9FF; /* Fondo oscuro para secciones importantes */
+  text-align: center;
+  font-family: var(--font-cbold);
+  text-shadow: var(--text-border);
+  padding: 1.5rem 0;
+}
+
+.dropdown-list-agenda {
+  background-image: url(../img/fondo\ de\ agenda.png);
+  color: var(--black-font);
+  font-size: var(--size-text);
+}
+
+.item-agenda {
+  margin: 15px 50px;
+  border-radius: 15px;
+  padding: 20px;
+  font-family: var(--font-cregular);
+}
+.cero {
+  background: var(--secondary-light); /* Verde azulado para destacar el primer elemento */
+  text-shadow: 0 0 4px rgba(4, 38, 140, 0.5); /* Sombreado basado en #04268C para contraste */
+}
+.cero .descripcion__agenda {
+  color: var(--black-font);
+}
+.first {
+  background: var(--primary-light); /* Azul claro para el segundo elemento */
+}
+
+.second {
+  background: var(--accent); /* Azul medio para el tercer elemento */
+}
+
+.third {
+  background: var(--complementary); /* Azul intermedio para el cuarto elemento */
+}
+
+.dropdown__arrow {
+  margin-left: 25px;
+}
+
+.ri-file-list-line {
+  margin-right: 30px;
+}
+
+/*
+.dropdown-list-agenda {
+  position: absolute;
+  left: 0;
+  top: 6rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s, top 0.3s;
+}
+
+.show {
+  opacity: 1;
+  width: 100%;
+  pointer-events: initial;
+  transition: top 0.3s ease-in-out;
+  padding: 0;
+  border: 0;
+  max-height: 1000px;
+  transition: max-height 0.4s ease-out;
+  position: initial;
+}
+*/
+
+.item-agenda:hover {
+  cursor: pointer;
+  background: var(--primary-light); /* Cambio al pasar el mouse para unificar con el azul claro */
+}
+
+/*=================CONTENIDO DE LA AGENDA===========*/
+.descripcion__agenda {
+  background-color: var(--background-white);
+  font-size: 1rem;
+  border-radius: 10px;
+  padding: 10px 30px;
+  border: 1px solid var(--complementary); /* Borde con azul intermedio para un toque sutil */
+}
+.descripcion__agenda:hover {
+  cursor: initial;
+}
+
+.descripcion__agenda ul {
+  list-style-type: square;
+}
+.descripcion__agenda ul li {
+  margin-block: 10px;
+}
+
+.descripcion__agenda {
+  margin-top: 10px;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s, top 0.3s;
+}
+
+.__list {
+  line-height: 1.5em;
+}
+
+.sh {
+  opacity: 1;
+  width: 100%;
+  pointer-events: initial;
+  transition: top 0.3s ease-in-out;
+  max-height: 1000px;
+  transition: max-height 0.4s ease-out;
+  position: initial;
+}
+
+.rota img {
+  transform: rotate(90deg);
+}
+
+/*===============CONTENIDO DEL CONTENIDO DE LA AGENDA================*/
+
+.titulo__contenido {
+  margin: 0;
+}
+.__list {
+  list-style-position: outside;
+}
+
+.descripcion__agenda .main__list {
+  list-style-type: none;
+}
+.descripcion__agenda a {
+  color: var(--accent); /* Enlaces con azul medio para consistencia */
+}
+
+.titulo__agenda i {
+  font-size: 50px; /* Corregí '5opx' a '50px' */
+}
+
+.icono__teams {
+  max-width: 40px;
+  min-width: 20px;
+  width: 100%;
+}
+.icono__teams2 {
+  max-width: 30px;
+  min-width: 5px;
+  width: 100%;
+}
+
+.titulo__taller {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  color: var(--primary-dark); /* Título con azul oscuro para énfasis */
+}
+.contenido__taller p {
+  margin-left: 10px;
+  line-height: 1.5em;
+}
+.contenido__taller ul {
+  margin-left: 30px;
+}
+
+/*================Tablas============*/
+.tabla {
+  text-align: center;
+}
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid var(--complementary); /* Borde de tabla con azul intermedio */
+}
+
+thead th:nth-child(1) {
+  width: 50%;
+}
+
+thead th:nth-child(2) {
+  width: 25%;
+}
+
+thead th:nth-child(3) {
+  width: 25%;
+}
+
+th,
+td {
+  padding: 20px;
+  color: var(--black-font);
+  background: var(--background-white);
+}
+
+/*SHOW AGENDAS*/
+
+/*=============for mobile devices========*/
+@media screen and (max-width: 1118px) {
+  :root {
+    /*sizes fonts*/
+    --size-title: 1.25rem;
+    --size-subtitle: 1rem;
+    --size-text: 0.75rem;
+  }
+  .titulo__taller {
+    font-size: 0.9rem;
+  }
+  .descripcion__agenda {
+    font-size: 0.6rem;
+  }
+  .info {
+    padding: 0.75rem 0;
+  }
+  .item-agenda {
+    margin: 4px 16px;
+    border-radius: 7px;
+    padding: 10px;
+  }
+  .ri-file-list-line {
+    margin-right: 15px;
+  }
+  .triangulo {
+    width: 10px;
+  }
+}
+/*===========For large devices============*/
+@media screen and(min-width: 1118px) {
+  .agenda {
+    font-size: var(--size-title);
+  }
+}
+
+.descripcion__agenda {
+  color: #000; /* o el color que prefieras */
+  background-color: #fff; /* para que se note el fondo */
+}

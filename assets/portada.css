@@ -1,0 +1,652 @@
+@font-face {
+  font-family: "GoodTimes";
+  src: url(../Tipografias/good\ times\ rg.otf);
+}
+@font-face {
+  font-family: "ComfortaBold";
+  src: url(../Tipografias/Comfortaa-Bold.ttf);
+}
+@font-face {
+  font-family: "ComfortaLight";
+  src: url(../Tipografias/Comfortaa-Light.ttf);
+}
+@font-face {
+  font-family: "ComfortaRegular";
+  src: url(../Tipografias/Comfortaa-Regular.ttf);
+}
+
+:root {
+  /*typography*/
+  --font-cbold: "ComfortaBold", sans-serif;
+  --font-clight: "ComfortaLight", sans-serif;
+  --font-cregular: "ComfortaRegular", sans-serif;
+  --font-good: "GoodTimes", sans-serif;
+
+  /*=====Colors backgrounds=====*/
+  /*gradient*/
+  --background-division: linear-gradient(90deg, #04268C, #1B51F2); /* Gradiente con azul oscuro y medio */
+  --background-white: white;
+  /*Colors fonts*/
+  --white-font: white;
+  --black-font: black;
+  --text-border: 0 0 6px rgba(19, 142, 235, 0.8), /* Sombreado basado en #138EEB */
+    0 0 10px rgba(19, 142, 235, 0.6),
+    0 0 15px rgba(19, 142, 235, 0.4);
+  --primary-dark: #04268C; /* Azul oscuro para fondos */
+  --primary-light: #138EEB; /* Azul claro para elementos principales */
+  --secondary-light: #2FD1C4; /* Verde azulado para detalles */
+  --accent: #1B51F2; /* Azul medio para acentos */
+  --complementary: #0A4DA6; /* Azul intermedio para bordes y elementos secundarios */
+
+  /*sizes fonts*/
+  --size-title: 3rem;
+  --size-subtitle: 2.5rem;
+  --size-text: 2rem;
+}
+
+.main__portada {
+  padding: 20px;
+  margin-top: 2.5rem;
+  max-height: 200vh;
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  background: url(../imagenes/Fondo/FOndoIndex.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  align-items: center;     /* centrado vertical */
+  flex-wrap: wrap;         /* importante para móviles */
+}
+
+.box__left {
+  display: block;
+  width: 700px;
+    max-width: 100%; /* evita que se salga de la pantalla */
+}
+
+.congress {
+  font-size: 2rem;
+  width: 100%; /* ocupa todo el ancho disponible */
+  font-family: var(--font-good);
+  text-shadow: var(--text-border);
+  color: var(--white-font);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); /* centrado horizontal */
+  text-align: center;
+  opacity: 0;
+}
+
+@media (max-width: 700px) {
+  .congress {
+    position: relative;    /* cambia al flujo normal en mobile */
+    width: 90%;            /* deja un pequeño margen lateral */
+    margin: 1rem auto;     /* centrado y espacio arriba/abajo */
+    font-size: 1.5rem;     /* tamaño más adecuado para móviles */
+    transform: none;       /* elimina translateX */
+    opacity: 1;            /* visible desde el inicio si quieres */
+  }
+}
+
+.logo {
+  display: flex;
+  justify-content: space-around;
+}
+
+.logo img {
+  max-width: 490px;
+  min-width: 100px;
+  width: 100%;
+}
+
+.box__right img {
+  max-width: 500px;
+  width: 100%;
+  
+}
+
+.box__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: flotar 3s ease-in-out infinite; /* animación continua */
+}
+/* Animación de flotación */
+@keyframes flotar {
+  0%   { transform: translateY(0) rotate(0deg); }
+  25%  { transform: translateY(-8px) rotate(2deg); }
+  50%  { transform: translateY(0) rotate(0deg); }
+  75%  { transform: translateY(-8px) rotate(-2deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+
+.parf {
+  width: 100%;
+  font-family: var(--font-cregular);
+  text-shadow: var(--text-border); /* Sombreado actualizado */
+  color: var(--white-font);
+  font-size: 1.1rem;
+}
+
+.lema {
+  padding: 10px;
+}
+
+.video-button,
+.country__title h3 {
+  font-family: var(--font-cregular);
+  text-shadow: var(--text-border); /* Sombreado coherente con la paleta */
+  color: var(--white-font);
+}
+
+.video-button {
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--white-font);
+  background: linear-gradient(180deg, #138EEB, #2FD1C4); /* Gradiente con azul claro y verde azulado */
+  border: none;
+  border-radius: 115px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.video-button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(180deg, #1B51F2, #2FD1C4); /* Gradiente con azul medio al pasar el mouse */
+}
+
+.button__video {
+  display: inline-flex;
+  margin: 15px 0px;
+}
+
+/*================banderas===============*/
+@keyframes wave {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10.4px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.paises {
+  margin: 20px 0px;
+}
+
+.country__title {
+  font-size: 1rem;
+}
+
+.flag img {
+  cursor: pointer;
+  min-width: 10px;
+  max-width: 50px;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--complementary); /* Borde con azul intermedio */
+}
+
+.flag {
+  transition: transform 0.5s ease-in-out;
+  margin: 0px 2px;
+}
+
+.flag:hover {
+  animation-play-state: running;
+  transform: scale(1.1);
+  transition: transform 0.5s ease-in-out;
+  animation: wave 1s ease-in-out infinite;
+}
+
+.flags__countries {
+  margin: 5px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+/*==============EVENTOS===============*/
+.eventos {
+  max-height: 230vh;
+  min-height: 80vh;
+  height: 100%;
+  width: 100%;
+  background-image: url("../imagenes/Fondo/Fondo2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: grid;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tarjetas {
+  width: 100%;
+  max-height: 230vh;
+  min-height: 50vh;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+}
+
+.evento {
+  width: 150px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  opacity: 0;
+  transform: translateY(30px);  /* un poco más abajo al inicio */
+  animation: aparecer 1s forwards;  /* animación más lenta */
+}
+
+/* Animación escalonada */
+#fecha-img { animation-delay: 0.2s; }
+#fechas-evento-img { animation-delay: 0.4s; }
+
+#modalidad-img { animation-delay: 0.6s; }
+#info-modalidad-img { animation-delay: 0.8s; }
+
+#comunidad-img { animation-delay: 1s; }
+#info-comunidad-img { animation-delay: 1.2s; }
+
+/* Hover para interacción */
+.evento:hover {
+  transform: translateY(-10px) scale(1.05) rotate(-2deg);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Keyframes para la animación de entrada */
+@keyframes aparecer {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+#fecha-img
+ {
+  width: 150px;
+  height: auto;
+  display: block;       /* permite usar margin auto */
+  margin: 0 auto;       /* centra horizontalmente */
+}
+
+#fechas-evento-img
+ {
+  width: 280px;
+  height: auto;
+  display: block;       /* permite usar margin auto */
+  margin: 1px auto 0 auto; /* margen superior de 20px, centrada horizontalmente */
+}
+
+#modalidad-img
+ {
+  width: 225px;
+  height: auto;
+  display: block;       /* permite usar margin auto */
+  margin: 0 auto;       /* centra horizontalmente */
+}
+
+#info-modalidad-img
+ {
+  width: 250px;
+  height: auto;
+  display: block;       /* permite usar margin auto */
+  margin: 10px auto 0 auto; /* margen superior de 20px, centrada horizontalmente */
+}
+
+#comunidad-img
+ {
+  width: 100px;
+  height: auto;
+  display: block;       /* permite usar margin auto */
+  margin: 0 auto;       /* centra horizontalmente */
+}
+
+#info-comunidad-img
+ {
+  width: 270px;
+  height: auto;
+  display: block;       /* permite usar margin auto */
+  margin: 1px auto 4px auto; /* margen superior de 20px, centrada horizontalmente */
+}
+
+.evento {
+    display: flex ;
+    flex-direction: column;
+}
+
+/*BOTON DE INSCRIPCION*/
+.Inscribeme-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 20px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: var(--font-cbold);
+  color: var(--white-font);
+  background: linear-gradient(180deg, #04268C, #138EEB); /* Gradiente con azul oscuro y claro */
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+  left: 29%;
+  top: 177%;
+  margin: 2%;
+}
+
+.Inscribeme-button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(180deg, #1B51F2, #2FD1C4); /* Gradiente con azul medio y verde azulado al hover */
+}
+
+/*AGENDA*/
+.Agenda-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 20px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: var(--font-cbold);
+  color: var(--white-font);
+  background: linear-gradient(180deg, #04268C, #138EEB); /* Gradiente con azul oscuro y claro */
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+  left: 60%;
+  top: 177%;
+  margin: 9%;
+}
+
+.Agenda-button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(180deg, #1B51F2, #2FD1C4); /* Gradiente con azul medio y verde azulado al hover */
+}
+
+.botones__descarga {
+  text-align: justify;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.boton_evento {
+  margin-right: 0.5rem;
+}
+
+.ri-pencil-fill {
+  transform: rotate(270deg);
+}
+
+/*==========MENSAJE BIENVENIDA===========*/
+.division {
+  font-size: var(--size-title);
+  text-align: center;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+}
+
+.MensajeBienvenida {
+  background-color: rgb(240, 240, 240);
+  max-height: 225vh;
+  min-height: 75vh;
+  height: 100%;
+  width: 100%;
+  background: url(../imagenes/Bienvenida/Fondo\ decano.png);
+  background-size: 100% auto;
+  background-position: top;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.foto__decano {
+  margin-bottom: 20px;
+}
+
+.foto__decano img {
+  max-width: 300px;
+  height: auto;
+}
+
+.MensajeBienvenidaTex {
+  width: 80%;
+  max-width: 800px;
+  font-size: 0.9rem;
+  text-align: justify;
+  padding: 0 20px;
+  color: var(--black-font);
+}
+
+.encabezado-utec {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.encabezado-utec .escudo {
+  max-width: 200px;
+  height: auto;
+  margin-top: 10px;
+}
+
+.pie, .firma-decano {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.firma-decano {
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .MensajeBienvenida {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 50px;
+  }
+
+  .foto__decano {
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+
+  .MensajeBienvenidaTex {
+    width: 60%;
+    padding: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .MensajeBienvenidaTex {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .foto__decano img {
+    max-width: 250px;
+  }
+}
+.ponentes__carrusel iframe {
+  max-height: 150vh;
+  min-height: 101vh;
+  height: 100%;
+}
+
+@media (max-width: 700px)
+ {
+  img.evento {
+  max-width: 150px;
+}
+  .tarjetas {
+    margin-top: 3rem;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+  }
+  .TarjEve img {
+    max-width: 275px;
+    min-width: 50px;
+    width: 100%;
+  }
+
+  .foto__decano {
+    align-items: center;
+    text-align: center;
+  }
+  .foto__decano img {
+    max-width: 100px;
+    min-width: 75px;
+    width: 100%;
+    margin: 10px 10px;
+  }
+  .pie {
+    margin-top: 1.3rem;
+  }
+  .botones__descarga {
+    text-align: justify;
+  }
+  .botones__descarga a {
+    font-family: var(--font-cbold);
+  }
+
+  .barra {
+    opacity: 0;
+  }
+  .paises {
+    width: 0px;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+  }
+  .country__title {
+    width: 0px;
+    position: absolute;
+    opacity: 0;
+  }
+
+  .flag img {
+    width: 0px;
+    position: absolute;
+    opacity: 0;
+  }
+
+  .flags__countries {
+    width: 0px;
+    opacity: 0;
+    position: absolute;
+  }
+  .parf {
+    width: 0px;
+    position: absolute;
+    opacity: 0;
+  }
+  .main__portada {
+    margin-top: 2.7rem;
+    background-image: url(../talleres-conferencias/Conferencia-Oscuro.png);
+    background-position: top;
+    background-repeat: no-repeat;
+  }
+  .main__box {
+    display: block;
+  }
+  .box__left {
+    width: 100%;
+  }
+  .logo {
+    width: 0px;
+    position: absolute;
+    opacity: 0;
+  }
+  .logo img {
+    width: 0px;
+    position: absolute;
+    opacity: 0;
+  }
+  .box__right img {
+    width: 100%;
+  }
+  .box__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-top: 10vh;
+  }
+  .congress {
+    margin-top: 1rem;
+    position: initial;
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  .main__portada {
+    display: block;
+    justify-items: center;
+  }
+  .box__left {
+    display: block;
+    justify-items: center;
+    text-align: center;
+  }
+  .box__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-top: 10vh;
+  }
+  .lema {
+    display: block;
+    justify-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 950px) {
+  .MensajeBienvenida {
+    display: block;
+    justify-content: center;
+  }
+  .foto__decano {
+    align-items: center;
+    text-align: center;
+  }
+  .foto__decano img {
+    max-width: 300px;
+    min-width: 250px;
+    width: 100%;
+    margin: 10px 10px;
+  }
+}
+
+.gnius h2 {
+  font-family: Arial, sans-serif;
+  text-shadow: none;
+  color:#ffffff
+}

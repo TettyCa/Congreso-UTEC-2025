@@ -1,0 +1,574 @@
+.Rombo,
+.persona,
+.bandera1,
+.Nombre,
+.Apellido,
+.Titulo,
+.bloque {
+  position: absolute;
+  max-width: 100%;
+}
+
+.Rombo {
+  position: absolute;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  left: 15%;
+  top: 20%;
+}
+.persona {
+  position: absolute;
+  max-width: 100%;
+  height: auto;
+  top: 12.5%;
+  left: 23%;
+}
+.bandera1 {
+  position: absolute;
+  width: auto;
+  height: auto;
+  left: 5%;
+  top: 70%;
+}
+
+.Nombre {
+  position: absolute;
+  top: 30%;
+  left: 55%;
+  font-size: 60px;
+}
+.Apellido {
+  position: absolute;
+  top: 40%;
+  left: 55%;
+  font-size: 65px;
+}
+.bloque {
+  position: absolute;
+  width: auto;
+  height: auto;
+  top: 55%;
+  left: 55%;
+}
+
+
+@font-face{
+  font-family: 'comfortaa';
+  src: url("Fuente/comfortaa/Comfortaa-Light.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: 'comfortaa';
+  src: url("Fuente/comfortaa/Comfortaa-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+h2 {
+  font-family: 'comfortaa';
+  color: #FFFFFF;
+  font-weight: normal;
+}
+
+h3 {
+  font-family: 'comfortaa';
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+
+
+/* Ajuste de los indicadores */
+.carousel-indicators li {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.5s ease;
+  box-shadow: 0 0 8px #00e6e6;
+}
+.carousel-indicators .active {
+  background-color: hwb(286 1% 76%);
+  box-shadow: 0 0 15px hsla(283, 100%, 71%, 0.816), 0 0 15px hsl(182, 92%, 50%),
+    0 0 15px rgb(245, 136, 245);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Media Queries para la responsividad */
+@media (max-width: 2560px) {
+  .carousel-indicators li {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+  }
+  .carousel-indicators {
+    margin: 17px;
+  }
+  .Rombo {
+    position: absolute;
+    max-width: 60%;
+    height: 60%;
+    object-fit: cover;
+    left: 15%;
+    top: 20%;
+  }
+  .persona {
+    position: absolute;
+    width: auto;
+    height: 40%;
+    top: 27.5%;
+    left: 25%;
+  }
+
+  .bandera1 {
+    position: absolute;
+    width: 10%;
+    height: auto;
+    left: 5%;
+    top: 70%;
+  }
+  .Nombre {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    font-size: 500%;
+  }
+  .Apellido {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    font-size: 600%;
+  }
+
+  .bloque {
+    position: absolute;
+    width: 26%;
+    height: 13%;
+    top: 60%;
+    left: 50%;
+  }
+}
+
+@media (max-width: 1440px) {
+  .carousel-indicators li {
+    width: 15px;
+    height: 15px;
+    margin: 10px;
+  }
+  .carousel-indicators {
+    margin: 8px;
+  }
+  .Rombo {
+    position: absolute;
+    max-width: 63%;
+    height: 63%;
+    object-fit: cover;
+    left: 13%;
+    top: 18%;
+  }
+  .persona {
+    position: absolute;
+    width: auto;
+    height: 40%;
+    top: 27.5%;
+    left: 25%;
+  }
+
+  .bandera1 {
+    position: absolute;
+    width: 8%;
+    height: auto;
+    left: 6%;
+    top: 70%;
+  }
+  .Nombre {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    font-size: 400%;
+  }
+  .Apellido {
+    position: absolute;
+    top: 37%;
+    left: 50%;
+    font-size: 480%;
+  }
+
+  .bloque {
+    position: absolute;
+    width: 30%;
+    height: 15%;
+    top: 60%;
+    left: 50%;
+  }
+}
+
+@media (max-width: 1288px) {
+  .carousel-indicators li {
+    width: 14px;
+    height: 14px;
+  }
+  .carousel-indicators {
+    margin: 7px 0;
+  }
+  .Rombo {
+    position: absolute;
+    max-width: 50%;
+    height: 50%;
+    object-fit: cover;
+    left: 20%;
+    top: 25%;
+  }
+  .persona {
+    position: absolute;
+    width: auto;
+    height: 40%;
+    top: 27.5%;
+    left: 25%;
+  }
+
+  .bandera1 {
+    position: absolute;
+    width: 10%;
+    height: auto;
+    left: 5%;
+    top: 70%;
+  }
+  .Nombre {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    font-size: 300%;
+  }
+  .Apellido {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    font-size: 360%;
+  }
+
+  .bloque {
+    position: absolute;
+    width: 26%;
+    height: 13%;
+    top: 60%;
+    left: 50%;
+  }
+}
+
+@media (max-width: 980px) {
+  .Rombo {
+    position: absolute;
+    max-width: 40%;
+    height: 40%;
+    object-fit: cover;
+    left: 20%;
+    top: 30%;
+  }
+  .persona {
+    position: absolute;
+    width: auto;
+    height: 40%;
+    top: 27.5%;
+    left: 25%;
+  }
+
+  .bandera1 {
+    position: absolute;
+    width: auto;
+    height: auto;
+    left: 5%;
+    top: 70%;
+  }
+  .Nombre {
+    position: absolute;
+    top: 30%;
+    left: 45%;
+    font-size: 30px;
+  }
+  .Apellido {
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    font-size: 35px;
+  }
+  .bloque {
+    position: absolute;
+    width: 20%;
+    height: 10%;
+    top: 55%;
+    left: 45%;
+  }
+}
+
+@media (max-width: 878px) {
+  .carousel-indicators li {
+    width: 8px;
+    height: 8px;
+  }
+  .carousel-indicators {
+    margin: 5px 0;
+  }
+  .Rombo {
+    position: absolute;
+    max-width: 40%;
+    height: 40%;
+    object-fit: cover;
+    left: 20%;
+    top: 30%;
+  }
+  .persona {
+    position: absolute;
+    width: auto;
+    height: 40%;
+    top: 27.5%;
+    left: 25%;
+  }
+
+  .bandera1 {
+    position: absolute;
+    width: auto;
+    height: auto;
+    left: 5%;
+    top: 70%;
+  }
+  .Nombre {
+    position: absolute;
+    top: 30%;
+    left: 45%;
+    font-size: 30px;
+  }
+  .Apellido {
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    font-size: 35px;
+  }
+  .bloque {
+    position: absolute;
+    width: 20%;
+    height: 10%;
+    top: 55%;
+    left: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-indicators li {
+    width: 7px;
+    height: 7px;
+    margin: 5px;
+  }
+  .carousel-indicators {
+    margin: 1%;
+  }
+  .Rombo {
+    position: absolute;
+    max-width: 50%;
+    height: 50%;
+    object-fit: cover;
+    left: 20%;
+    top: 25%;
+  }
+  .persona {
+    position: absolute;
+    width: auto;
+    height: 40%;
+    top: 27.5%;
+    left: 25%;
+  }
+
+  .bandera1 {
+    position: absolute;
+    width: 10%;
+    height: auto;
+    left: 5%;
+    top: 68%;
+  }
+  .Nombre {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    font-size: 160%;
+  }
+  .Apellido {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    font-size: 192%;
+  }
+
+  .bloque {
+    position: absolute;
+    width: 30%;
+    height: 15%;
+    top: 60%;
+    left: 50%;
+  }
+}
+
+@media (max-width: 694px) {
+  .carousel-indicators li {
+    width: 7px;
+    height: 7px;
+    margin: 4px;
+  }
+  .carousel-indicators {
+    margin: 4px;
+  }
+  .Rombo {
+    position: absolute;
+    max-width: 50%;
+    height: 50%;
+    object-fit: cover;
+    left: 20%;
+    top: 25%;
+  }
+  .persona {
+    position: absolute;
+    width: auto;
+    height: 40%;
+    top: 27.5%;
+    left: 25%;
+  }
+
+  .bandera1 {
+    position: absolute;
+    width: 10%;
+    height: auto;
+    left: 5%;
+    top: 70%;
+  }
+  .Nombre {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    font-size: 150%;
+  }
+  .Apellido {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    font-size: 180%;
+  }
+  .bloque {
+    position: absolute;
+    width: 30%;
+    height: 15%;
+    top: 65%;
+    left: 50%;
+  }
+}
+
+@media (max-width: 450px) {
+  .carousel-indicators li {
+    width: 6px;
+    height: 6px;
+    margin: 3px;
+  }
+  .carousel-indicators {
+    margin: 3px;
+  }
+  .Rombo {
+    position: absolute;
+    max-width: 40%;
+    height: 40%;
+    object-fit: cover;
+    left: 20%;
+    top: 30%;
+  }
+  .persona {
+    position: absolute;
+    width: auto;
+    height: 40%;
+    top: 27.5%;
+    left: 25%;
+  }
+
+  .bandera1 {
+    position: absolute;
+    width: 54px;
+    height: auto;
+    left: 5%;
+    top: 65%;
+  }
+  .Nombre {
+    position: absolute;
+    top: 25%;
+    left: 45%;
+    font-size: 20px;
+  }
+  .Apellido {
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    font-size: 25px;
+  }
+  .bloque {
+    position: absolute;
+    width: 28%;
+    height: 14%;
+    top: 65%;
+    left: 45%;
+  }
+}
+
+@media (max-width: 320px) {
+  .carousel-indicators li {
+    width: 4px;
+    height: 4px;
+    margin: 2px;
+  }
+  .carousel-indicators {
+    margin: 3px;
+  }
+  .Rombo {
+    position: absolute;
+    max-width: 40%;
+    height: 40%;
+    object-fit: cover;
+    left: 20%;
+    top: 30%;
+  }
+  .persona {
+    position: absolute;
+    width: auto;
+    height: 40%;
+    top: 27.5%;
+    left: 25%;
+  }
+
+  .bandera1 {
+    position: absolute;
+    width: 40px;
+    height: auto;
+    left: 5%;
+    top: 65%;
+  }
+  .Nombre {
+    position: absolute;
+    top: 25%;
+    left: 45%;
+    font-size: 16px;
+  }
+  .Apellido {
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    font-size: 21px;
+  }
+  .bloque {
+    position: absolute;
+    width: 28%;
+    height: 14%;
+    top: 65%;
+    left: 45%;
+  }
+}
