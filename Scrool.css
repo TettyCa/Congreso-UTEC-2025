@@ -1,0 +1,33 @@
+/* 1. ESTILOS GENERALES DE LA BARRA (WEBKIT - Chrome, Safari, Edge) */
+/* Aplica al cuerpo de la página (body) o a un contenedor específico */
+
+body::-webkit-scrollbar {
+    /* Define el ancho de la barra de desplazamiento vertical */
+    width: 20px;
+    /* Define el alto de la barra de desplazamiento horizontal */
+    height: 12px;
+}
+
+/* 2. ESTILOS DEL TRACK (EL FONDO POR DONDE SE DESPLAZA) */
+body::-webkit-scrollbar-track {
+    /* Color de fondo del track (el carril) */
+/* 💡 Opción 1: Usar RGB de tu color primary-dark (#04268C) con 20% de opacidad */
+    background: rgba(121, 151, 212, 0.467);
+    /* Opcional: bordes redondeados */
+    border-radius: 10px;
+}
+
+/* 3. ESTILOS DEL THUMB (EL DESLIZADOR O "BARRA") */
+body::-webkit-scrollbar-thumb {
+    /* Color del deslizador (la barra que mueves) */
+    background-color: var(--primary-light); /* Usamos tu color azul claro */
+    /* Bordes redondeados */
+    border-radius: 10px;
+    /* Opcional: borde para que se separe un poco del track */
+    border: 3px solid var(--body-color); 
+}
+
+/* 4. ESTILOS PARA EL HOVER (Opcional: color al pasar el ratón) */
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #24FFC5
+}
